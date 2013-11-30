@@ -23,8 +23,8 @@ This is a Maven Wagon which enables to deploy to Dropbox.
 		</extensions>
 	</build>
 	
-	<repositories>
-		<repository>
+	<pluginRepositories>
+		<pluginRepository>
 			<id>uphyjp-releases</id>
 			<url>http://uphy.jp/nexus/content/repositories/releases/</url>
 			<releases>
@@ -33,8 +33,8 @@ This is a Maven Wagon which enables to deploy to Dropbox.
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-	</repositories>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<distributionManagement>
 		<repository>
