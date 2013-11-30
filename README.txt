@@ -3,10 +3,6 @@ wagon-dropbox
 
 This is a Maven Wagon which enables to deploy to Dropbox.
 
-0. Build and Install this wagon.
-
-	mvn clean install
-
 1. Register your Dropbox App and get "App key" and "App secret".
 
 	https://www.dropbox.com/developers/apps
