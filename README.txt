@@ -21,14 +21,8 @@ This is a Maven Wagon which enables to deploy to Dropbox.
 	
 	<pluginRepositories>
 		<pluginRepository>
-			<id>uphyjp-releases</id>
-			<url>http://uphy.jp/nexus/content/repositories/releases/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
+			<id>dropbox-uphy</id>
+			<url>http://dl.dropboxusercontent.com/u/2047205/</url>
 		</pluginRepository>
 	</pluginRepositories>
 

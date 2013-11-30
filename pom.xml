@@ -58,6 +58,13 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<extensions>
+			<extension>
+				<groupId>jp.uphy.maven</groupId>
+				<artifactId>wagon-dropbox</artifactId>
+				<version>1.0.0</version>
+			</extension>
+		</extensions>
 	</build>
 
 	<dependencies>
@@ -78,16 +85,17 @@
 		</dependency>
 	</dependencies>
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>uphyjp-releases</id>
+			<url>http://dl.dropboxusercontent.com/u/2047205/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<distributionManagement>
-		<snapshotRepository>
-			<id>uphyjp-snapshot</id>
-			<name>uphy.jp - SNAPSHOT</name>
-			<url>http://uphy.jp/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
 		<repository>
-			<id>uphyjp-release</id>
-			<name>uphy.jp - RELEASE</name>
-			<url>http://uphy.jp/nexus/content/repositories/releases/</url>
+			<id>dropbox</id>
+			<url>dropbox:/Public</url>
 		</repository>
 	</distributionManagement>
 
