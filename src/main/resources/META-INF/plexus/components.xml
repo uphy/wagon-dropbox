@@ -1,0 +1,14 @@
+<component-set>
+  <components>
+    <component>
+      <role>org.apache.maven.wagon.Wagon</role>
+      <role-hint>dropbox</role-hint>
+      <implementation>jp.uphy.maven.dropbox.DropboxWagon</implementation>
+      <description></description>
+      <isolated-realm>false</isolated-realm>
+      <configuration>
+        <client-identifier>Maven Wagon Dropbox/1.0</client-identifier>
+      </configuration>
+    </component>
+  </components>
+</component-set>
