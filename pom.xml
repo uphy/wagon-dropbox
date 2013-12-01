@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jp.uphy.maven</groupId>
 	<artifactId>wagon-dropbox</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 
 	<build>
 		<plugins>
@@ -62,7 +62,7 @@
 			<extension>
 				<groupId>jp.uphy.maven</groupId>
 				<artifactId>wagon-dropbox</artifactId>
-				<version>1.0.0</version>
+				<version>1.0.1</version>
 			</extension>
 		</extensions>
 	</build>
