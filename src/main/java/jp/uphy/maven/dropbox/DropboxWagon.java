@@ -65,6 +65,9 @@ public final class DropboxWagon extends StreamWagon {
     if (getAuthenticationInfo() == null || getAuthenticationInfo().getUserName() == null) {
       throw new AuthenticationException("Authentication not set.\n" + usage()); //$NON-NLS-1$
     }
+    if (this.client != null) {
+      return;
+    }
 
     final String appKey = getAuthenticationInfo().getUserName();
     final String appSecret = getAuthenticationInfo().getPrivateKey();
@@ -126,7 +129,7 @@ public final class DropboxWagon extends StreamWagon {
    */
   @Override
   public void closeConnection() throws ConnectionException {
-    this.client = null;
+    // do nothing
   }
 
   /**
@@ -165,7 +168,13 @@ public final class DropboxWagon extends StreamWagon {
   }
 
   private void createParentDirectory(final String filepath) throws DbxException {
+    if (filepath == null) {
+      throw new IllegalArgumentException();
+    }
     final File file = new File(filepath);
+    if (file.getParent() == null) {
+      return;
+    }
     this.client.createFolder(file.getParent());
   }
 
